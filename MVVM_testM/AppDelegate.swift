@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  MVVM_testM
 //
-//  Created by alex zolin on 31.07.16.
-//  Copyright © 2016 alex zolin. All rights reserved.
+//  Created by alex  on 31.07.16.
+//  Copyright © 2016 alex . All rights reserved.
 //
 
 import UIKit
@@ -12,11 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    let rootWireframe = RootWireframe()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        
+        return self.rootWireframe.application(didFinishLaunchingWithOptions: launchOptions, window: self.window!)
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
